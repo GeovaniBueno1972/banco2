@@ -3,11 +3,13 @@ const consign = require('consign')
 const db = require('./config/db')
 const cors = require('cors')
 
+
 app.db = db
+
 
 app.use((req, res, next) => {
     app.use(cors())
-    res.header('Access-Control-Allow-Origin', '*')
+    res.header("Access-Control-Allow-Origin", '*')
     res.header('Access-Control-Allow-Header',
     'Origin, X-Requested-With, Content-Type, Accept, Authorization')
     if(req.method === 'OPTIONS'){
