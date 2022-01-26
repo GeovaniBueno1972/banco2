@@ -23,7 +23,7 @@ module.exports = app => {
         } else {
             app.db( 'clientes')
                 .insert (clientes)
-                .then(_ => res.status(204).send())
+                .then(_ => res.status(204).send(ok))
                 .catch(err => res.status(500).send(err))
             }
     }
